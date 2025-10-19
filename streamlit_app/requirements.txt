@@ -1,0 +1,10 @@
+streamlit==1.37.0
+streamlit-folium==0.25.3
+folium==0.16.0
+plotly==5.23.0
+pandas==2.2.2
+requests==2.32.3
+joblib==1.4.2
+scikit-learn==1.5.1
+pydeck>=0.8.0
+streamlit-js-eval>=0.1.7

@@ -1,0 +1,10 @@
+{
+  "feature_order": [
+    "rainfall_mm",
+    "river_level_m",
+    "elevation_m",
+    "urban_area"
+  ],
+  "trained_on": "sqlite:data/disasterguard.db",
+  "rows": 1485
+}
