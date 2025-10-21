@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: disasterguard
+    env: python
+    plan: starter            # use "free" for demo or "starter" for more resources
+    region: oregon           # or frankfurt/singapore depending on your users
+    runtime: python
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r streamlit_app/requirements.txt
+    startCommand: |
+      PYTHONPATH=streamlit_app \
+      streamlit run streamlit_app/app.py \
+        --server.address 0.0.0.0 \
+        --server.port $PORT
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DG_DB_PATH
+        value: /opt/render/project/src/streamlit_app/data/disasterguard.db
+      - key: OWM_KEY
+        sync: false              # set value in Render Dashboard → Environment
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false              # set value in Render Dashboard
+      - key: TELEGRAM_CHAT_ID
+        sync: false              # set value in Render Dashboard
+      - key: STREAMLIT_SERVER_ENABLECORS
+        value: "false"           # good defaults for hosted env
+      - key: STREAMLIT_SERVER_ENABLEXSENDFILE
+        value: "false"
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/streamlit_app/data
+      sizeGB: 2
