@@ -1,10 +1,30 @@
+# Build tools
+pip==25.1.1
+setuptools>=65.5.0
+wheel
+
+# Core
 streamlit==1.37.0
-streamlit-folium==0.25.3
+streamlit-folium==0.20.0
 folium==0.16.0
+pydeck==0.9.1
+streamlit-js-eval==0.1.7
+
+# Viz
 plotly==5.23.0
+matplotlib==3.8.4
+
+# Data & HTTP
 pandas==2.2.2
+numpy==1.26.4
 requests==2.32.3
 joblib==1.4.2
 scikit-learn==1.5.1
-pydeck>=0.8.0
-streamlit-js-eval>=0.1.7
+
+# Geo (lightweight)
+shapely==2.0.4
+
+# Compat
+protobuf>=4.21,<5
+typing_extensions>=4.8
+packaging>=23.2

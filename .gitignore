@@ -1,0 +1,65 @@
+# ============================================================
+# DisasterGuard AI – Git Ignore
+# ============================================================
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python build/cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# --- Streamlit and logs ---
+.streamlit/secrets.toml
+.streamlit/config.toml
+logs/
+*.log
+
+# --- Datasets & local DBs ---
+*.db
+*.sqlite3
+*.db-journal
+streamlit_app/data/disasterguard.db
+streamlit_app/data/*.csv
+backups/
+
+# --- Models ---
+streamlit_app/models/*.pkl
+streamlit_app/models/metadata.json
+
+# --- System / IDE / MacOS files ---
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# --- Temporary & export artifacts ---
+*.tmp
+*.bak
+*.swp
+*.zip
+*.tar
+*.gz
+*.csv
+*.xlsx
+
+# --- Node / frontend build (if added later) ---
+node_modules/
+dist/
+build/
+
+# --- Jupyter or notebooks ---
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# --- Credentials / keys ---
+*.pem
+*.key
+*.json
+token_*.txt

@@ -6,5 +6,13 @@
     "urban_area"
   ],
   "trained_on": "sqlite:data/disasterguard.db",
-  "rows": 1485
+  "rows": 1485,
+  "model_type": "RandomForestClassifier",
+  "timestamp_utc": "2025-10-18T10:45:00Z",
+  "metrics": {
+    "accuracy": 0.88,
+    "precision": 0.86,
+    "recall": 0.84,
+    "f1": 0.85
+  }
 }
